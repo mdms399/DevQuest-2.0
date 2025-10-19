@@ -1,0 +1,23 @@
+.box {
+    display: inline-block;    /* Faz o elemento se comportar como inline (lado a lado), mas aceitando propriedades de block. */
+    width: 150px;               /* Define a largura do elemento. */
+    height: 100px;              /* Define a altura do elemento. */
+    background-color: #add8e6;  /* Define a cor de fundo (Azul Claro). */
+    border: 2px solid #0000ff;  /* Adiciona uma borda azul sólida de 2 pixels de espessura. */
+    margin: 10px;               /* Adiciona um espaçamento externo de 10px em todos os lados (fora da borda). */
+    padding: 15px;              /* Adiciona um espaçamento interno de 15px (entre o conteúdo e a borda). */
+    text-align: center;         /* Centraliza o texto horizontalmente dentro do elemento. */
+    color: #333;                /* Define a cor do texto para um cinza escuro. */
+}
+
+h1, p {
+    text-align: center;         /* Centraliza o texto desses elementos na página. */
+    font-family: sans-serif;    /* Define uma fonte sem serifa para melhor legibilidade. */
+}
+
+code {
+    background-color: #eee;     /* Define uma cor de fundo cinza claro para destacar o código. */
+    padding: 2px 4px;           /* Adiciona um pequeno espaçamento interno para não ficar colado no texto. */
+    border-radius: 3px;         /* Arredonda levemente as bordas do destaque. */
+    font-family: monospace;     /* Define uma fonte monoespaçada, comum para exibir código. */
+}

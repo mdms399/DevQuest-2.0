@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu-vertical {
+    width: 200px; /* Define uma largura para o container do menu */
+    margin: 20px auto; /* Centraliza o menu na página */
+}
+
+.menu-vertical a {
+    /* --- A MÁGICA ACONTECE AQUI --- */
+
+    display: block; /* Faz cada link ocupar toda a largura disponível, empurrando os outros para baixo. */
+    
+    padding: 10px 15px; /* Adiciona espaçamento interno para o link 'respirar'. (10px em cima/baixo, 15px nas laterais) */
+    margin-bottom: 8px; /* Cria uma margem na parte de baixo de cada link, separando-os verticalmente. */
+
+    /* --- Estilos extras para parecer um botão --- */
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white;              /* Cor do texto */
+    text-decoration: none;     /* Remove o sublinhado padrão dos links */
+    text-align: center;        /* Centraliza o texto dentro do botão */
+    border-radius: 5px;        /* Arredonda as bordas */
+}
+
+/* Efeito visual quando o mouse passa por cima do botão */
+.menu-vertical a:hover {
+    background-color: #0056b3; /* Escurece o azul para dar feedback ao usuário */
+}
