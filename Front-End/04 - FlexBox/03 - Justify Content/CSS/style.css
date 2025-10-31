@@ -1,0 +1,74 @@
+/* Estilo para o título <h1> */
+h1 {
+    margin: 20px; /* Adiciona uma margem externa de 20px em todos os lados do título */
+}
+
+/* Classe container: define o espaço onde os elementos flex serão organizados */
+.container {
+    width: 500px; /* Define a largura do container como 500px */
+    height: 500px; /* Define a altura do container como 500px */
+    border: 2px solid #000; /* Cria uma borda preta de 2px ao redor do container */
+    margin: 20px; /* Cria um espaçamento externo de 20px em volta do container */
+}
+
+/* Define o estilo para todos os <div> dentro de um elemento com classe .container */
+.container div {
+    background-color: red; /* Define a cor de fundo dos blocos como vermelho */
+    width: 100px; /* Define a largura de cada bloco como 100px */
+    height: 100px; /* Define a altura de cada bloco como 100px */
+    margin: 10px; /* Espaçamento externo de 10px entre os blocos */
+    text-align: center; /* Centraliza o texto dentro do bloco horizontalmente */
+    font-size: 20px; /* Define o tamanho da fonte em 20px */
+    font-weight: 700; /* Deixa o texto em negrito (peso da fonte 700) */
+}
+
+/* Remove a margem dos <div> internos quando o container usa certas classes de espaçamento */
+.container.space-around div,
+.container.space-evenly div,
+.container.space-between div {
+    margin: 0; /* Remove a margem externa dos blocos para evitar espaçamentos extras */
+}
+
+/* ===== Configurações de alinhamento (justify-content) ===== */
+
+/* Alinha os itens ao início do container */
+.flex-start {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: flex-start; /* Alinha os itens no início do eixo principal */
+    flex-direction: column; /* Organiza os itens verticalmente (em coluna) */
+}
+
+/* Alinha os itens ao final do container */
+.flex-end {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: flex-end; /* Alinha os itens no final do eixo principal */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Centraliza os itens no meio do container */
+.center {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: center; /* Centraliza os itens no eixo principal */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+/* Distribui os itens igualmente com espaço entre eles, mas sem espaço nas bordas */
+.space-between {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: space-between; /* Espaço igual entre os itens, sem espaço nas extremidades */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Distribui os itens com espaço igual entre e também nas bordas */
+.space-around {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: space-around; /* Espaçamento igual entre os itens e um pouco nas bordas */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Distribui os itens com espaço exatamente igual entre todos os elementos e bordas */
+.space-evenly {
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: space-evenly; /* Espaçamento completamente igual entre e nas bordas */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}

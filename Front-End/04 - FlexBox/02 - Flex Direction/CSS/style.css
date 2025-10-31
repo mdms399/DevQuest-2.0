@@ -1,0 +1,47 @@
+/* Estilo para o elemento <h1> */
+h1 {
+    margin: 20px; /* Adiciona uma margem externa de 20px em todos os lados do título */
+}
+
+/* Classe container: define um contêiner para os elementos internos */
+.container {
+    width: 500px; /* Define a largura fixa de 500px */
+    height: 500px; /* Define a altura fixa de 500px */
+    border: 2px solid #000; /* Cria uma borda preta de 2px ao redor do contêiner */
+    margin: 20px; /* Adiciona espaço de 20px fora do contêiner */
+}
+
+/* Estilos aplicados a todos os <div> dentro de um elemento com classe .container */
+.container div {
+    background-color: red; /* Define a cor de fundo vermelha */
+    width: 100px; /* Define a largura de 100px */
+    height: 100px; /* Define a altura de 100px */
+    margin: 10px; /* Adiciona espaço externo de 10px em todos os lados do bloco */
+    text-align: center; /* Centraliza o texto horizontalmente dentro do bloco */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    font-weight: 700; /* Deixa o texto em negrito (peso 700) */
+}
+
+/* Classe .row: organiza os elementos filhos em uma linha (horizontalmente) */
+.row {
+    display: flex; /* Ativa o layout flexível (flexbox) */
+    flex-direction: row; /* Define que os itens devem ser dispostos em linha da esquerda para a direita */
+}
+
+/* Classe .row-reverse: organiza os elementos em linha, mas de trás pra frente */
+.row-reverse {
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: row-reverse; /* Disposição em linha da direita para a esquerda */
+}
+
+/* Classe .column: organiza os elementos filhos em coluna (verticalmente) */
+.column {
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: column; /* Define que os itens devem ser empilhados de cima para baixo */
+}
+
+/* Classe .column-reverse: organiza os elementos em coluna, mas de baixo pra cima */
+.column-reverse {
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: column-reverse; /* Disposição dos itens de baixo para cima */
+}

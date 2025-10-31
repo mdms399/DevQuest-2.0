@@ -1,0 +1,82 @@
+/* ===== Estilo para o título <h1> ===== */
+h1 {
+    margin: 20px; /* Adiciona uma margem externa de 20px em todos os lados do título */
+}
+
+/* ===== Classe .container: área que conterá os elementos flex ===== */
+.container {
+    width: 500px; /* Define a largura do container como 500px */
+    height: 500px; /* Define a altura do container como 500px */
+    border: 2px solid #000; /* Cria uma borda preta de 2px ao redor do container */
+    margin: 20px; /* Cria um espaçamento externo de 20px fora do container */
+    padding: 10px; /* Cria um espaçamento interno de 10px dentro do container */
+    flex: 1; /* Faz o container ocupar o máximo de espaço possível dentro de outro flex container (caso exista) */
+}
+
+/* ===== Estilos para os elementos internos (<div>) do container ===== */
+.container div {
+    background-color: blue; /* Define a cor de fundo azul para os blocos internos */
+    text-align: center; /* Centraliza o texto dentro de cada bloco horizontalmente */
+    font-size: 20px; /* Define o tamanho do texto como 20px */
+    font-weight: 700; /* Deixa o texto em negrito */
+    margin: 10px; /* Cria um espaçamento externo de 10px entre os blocos */
+    padding: 10px; /* Adiciona espaçamento interno de 10px dentro dos blocos */
+    flex: 1; /* Permite que cada bloco se expanda igualmente dentro do flex container */
+}
+
+/* ===== Alinhamento dos itens no eixo transversal (align-items) ===== */
+
+/* Alinha os itens ao topo (início do eixo transversal) */
+.flex-start {
+    display: flex; /* Ativa o layout flexbox */
+    align-items: flex-start; /* Alinha os itens no topo do container */
+    flex-direction: column; /* Organiza os itens verticalmente (em coluna) */
+}
+
+/* Alinha os itens na parte inferior (final do eixo transversal) */
+.flex-end {
+    display: flex; /* Ativa o layout flexbox */
+    align-items: flex-end; /* Alinha os itens na base do container */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Centraliza os itens no eixo transversal (no meio verticalmente) */
+.center {
+    display: flex; /* Ativa o layout flexbox */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+/* Faz os itens se esticarem igualmente para preencher toda a altura disponível */
+.stretch {
+    display: flex; /* Ativa o layout flexbox */
+    align-items: stretch; /* Estica os itens para preencher o eixo transversal */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Alinha os itens de acordo com suas linhas de base do texto */
+.baseline {
+    display: flex; /* Ativa o layout flexbox */
+    align-items: baseline; /* Alinha os itens considerando a linha base do texto de cada elemento */
+}
+
+/* ===== Ajustes de tamanho de fonte para demonstrar o alinhamento baseline ===== */
+
+/* Aumenta o tamanho da fonte do segundo item (para mostrar diferença de linha de base) */
+.container div.baseline-2 {
+    font-size: 40px; /* Define o tamanho do texto em 40px */
+}
+
+/* Aumenta ainda mais o tamanho da fonte do terceiro item */
+.container div.baseline-3 {
+    font-size: 100px; /* Define o tamanho do texto em 100px */
+}
+
+
+/* 💡 Resumo rápido do que esse código demonstra:
+
+Ele mostra como o align-items funciona no Flexbox, mudando o alinhamento dos itens dentro do container.
+
+O .baseline mostra o comportamento especial onde o alinhamento é baseado na linha de base do texto, por isso as fontes maiores influenciam na posição dos outros elementos.
+
+O flex: 1 faz os blocos se expandirem igualmente dentro do espaço disponível. */
