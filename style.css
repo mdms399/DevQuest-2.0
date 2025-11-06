@@ -2,8 +2,16 @@
     box-sizing: border-box;
 }
 
-
 .container {
-    display: flex;
-    justify-content: space-between;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid #000; /* Apenas para visualizar o contêiner */
+}
+
+.container > div {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid #333;
 }

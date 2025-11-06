@@ -1,0 +1,20 @@
+/* ===== Classe .nowrap ===== */
+.nowrap {
+    display: flex; /* Ativa o layout flexbox para o container */
+    flex-wrap: nowrap; /* Impede que os itens quebrem de linha — todos ficam em uma única linha */
+    flex-direction: row; /* Organiza os itens horizontalmente (da esquerda para a direita) */
+}
+
+/* ===== Classe .wrap ===== */
+.wrap {
+    display: flex; /* Ativa o layout flexbox */
+    flex-flow: row wrap; /* Atalho que combina flex-direction: row e flex-wrap: wrap */
+    /* Ou seja, os itens são dispostos em linha e podem quebrar para a próxima linha se não couberem */
+}
+
+/* ===== Classe .wrap-reverse ===== */
+.wrap-reverse {
+    display: flex; /* Ativa o layout flexbox */
+    flex-wrap: wrap-reverse; /* Permite a quebra de linha, mas os itens “sobem” em vez de “descer” para a próxima linha */
+    flex-direction: column; /* Organiza os itens verticalmente (em coluna) */
+}

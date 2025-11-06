@@ -1,0 +1,15 @@
+/* ===== Classe .gap ===== */
+.gap {
+    display: flex; /* Ativa o layout flexbox no container */
+    gap: 50px; /* Define o espaçamento de 50px entre cada item flex (tanto horizontal quanto vertical) */
+    /* Você também pode usar valores em porcentagem, por exemplo: gap: 10%; */
+}
+
+
+/* 💡 Explicação extra:
+
+A propriedade gap foi criada originalmente para o CSS Grid, mas agora também funciona perfeitamente no Flexbox.
+
+Diferente de usar margin, o gap não adiciona espaçamento fora do container, apenas entre os itens.
+
+É uma forma mais limpa e moderna de criar espaçamento uniforme. */

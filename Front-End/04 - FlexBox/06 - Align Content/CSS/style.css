@@ -1,0 +1,61 @@
+/* ===== Classe .flex-start ===== */
+.flex-start {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: flex-start; /* Agrupa todas as linhas de itens no início do container (parte superior) */
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha quando não houver espaço suficiente */
+    flex-direction: column; /* Organiza os itens verticalmente (em coluna) */
+}
+
+/* ===== Classe .flex-end ===== */
+.flex-end {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: flex-end; /* Agrupa todas as linhas de itens no final do container (parte inferior) */
+    flex-flow: column wrap; /* Atalho que combina flex-direction: column e flex-wrap: wrap */
+}
+
+/* ===== Classe .center ===== */
+.center {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: center; /* Centraliza as linhas de itens no meio do container (no eixo cruzado) */
+    flex-wrap: wrap; /* Permite a quebra de linha */
+    justify-content: center; /* Centraliza os itens também no eixo principal */
+    flex-direction: column; /* Organiza os itens em coluna (de cima para baixo) */
+}
+
+/* ===== Classe .space-between ===== */
+.space-between {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: space-between; /* Distribui as linhas de itens com espaço igual entre elas, mas sem espaço nas extremidades */
+    flex-wrap: wrap; /* Permite múltiplas linhas */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* ===== Classe .space-around ===== */
+.space-around {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: space-around; /* Distribui as linhas de itens com espaços iguais entre e nas bordas */
+    flex-wrap: wrap; /* Permite múltiplas linhas */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* ===== Classe .space-evenly ===== */
+.space-evenly {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: space-evenly; /* Distribui as linhas de itens com espaçamento igual entre todas as linhas e nas bordas */
+    flex-wrap: wrap; /* Permite múltiplas linhas */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* ===== Classe .stretch ===== */
+.stretch {
+    display: flex; /* Ativa o layout flexbox */
+    align-content: stretch; /* Faz as linhas se esticarem para ocupar todo o espaço disponível verticalmente */
+    flex-wrap: wrap; /* Permite a quebra de linha (necessária para ver o efeito do align-content) */
+}
+
+
+/* 💡 Resumo rápido:
+
+align-content só funciona se houver mais de uma linha de itens (ou seja, quando flex-wrap: wrap está ativo).
+
+Cada classe acima demonstra uma variação diferente de como essas linhas se distribuem dentro do container. */
