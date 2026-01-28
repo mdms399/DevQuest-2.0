@@ -1,57 +1,89 @@
-/* product-category.css */
+/* product-category.css - Estilos das categorias de produtos */
+
+/* .categories-section: Container da seção de categorias */
 .categories-section {
+    /* padding: 40px 0px espaço interno vertical */
     padding: 40px 0px;
+    /* display: flex usa flexbox */
     display: flex;
+    /* flex-wrap: wrap quebra os itens para a próxima linha */
     flex-wrap: wrap;
+    /* justify-content: center centraliza os itens horizontalmente */
     justify-content: center;
+    /* gap: 30px espaço entre os cards */
     gap: 30px;
 }
 
+/* .category-card: Card individual de categoria */
 .category-card {
+    /* position: relative permite posicionamento absoluto de elementos filhos */
     position: relative;
+    /* width: 317px e height: 500px dimensões do card */
     width: 317px;
     height: 500px;
+    /* border-radius: 15px arredonda os cantos */
     border-radius: 15px;
+    /* overflow: hidden garante que o conteúdo não saia do card */
     overflow: hidden;
 }
 
+/* .overlay: Camada escura sobre a imagem */
 .overlay {
+    /* position: absolute posiciona em relação ao card */
     position: absolute;
+    /* inset: 0 faz a camada ocupar toda a área do card */
     inset: 0;
+    /* background-color: rgba cria uma cor com transparência (25% de opacidade) */
     background-color: rgba(0, 0, 0, 0.25);
+    /* z-index: 1 coloca a camada acima da imagem */
     z-index: 1;
 }
 
+/* .category-name: Nome da categoria mostrado no card */
 .category-name {
+    /* position: absolute posiciona em relação ao card */
     position: absolute;
+    /* left: 50% e transform: translateX(-50%) centraliza horizontalmente */
     left: 50%;
+    /* top: 50% e transform: translateY(-50%) centraliza verticalmente */
     top: 50%;
+    /* transform: combina a translação para centralizar */
     transform: translate(-50%, -50%);
+    /* z-index: 2 coloca o texto acima do overlay */
     z-index: 2;
+    /* text-align: center centraliza o texto */
     text-align: center;
 }
 
+/* Imagem de fundo para categoria Casual */
 .casual {
+    /* background: define a imagem de fundo */
     background: url(../../images/products/casual.jpg) no-repeat center;
+    /* background-size: cover faz a imagem cobrir todo o card */
     background-size: cover;
 }
 
+/* Imagem de fundo para categoria Esporte */
 .esporte {
     background: url(../../images/products/esporte.jpg) no-repeat center;
     background-size: cover;
 }
 
+/* Imagem de fundo para categoria Moderno */
 .moderno {
     background: url(../../images/products/moderno.jpg) no-repeat center;
     background-size: cover;
 }
 
+/* Imagem de fundo para categoria Futurista */
 .futurista {
     background: url(../../images/products/futurista.jpg) no-repeat center;
     background-size: cover;
 }
 
+/* @media: Estilos para dispositivos com largura máxima de 500px */
 @media(max-width:500px) {
+    /* Em telas pequenas, o card ocupa 100% da largura */
     .category-card {
         width: 100%;
     }

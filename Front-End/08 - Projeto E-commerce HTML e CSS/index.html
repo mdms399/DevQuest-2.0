@@ -1,12 +1,20 @@
+<!-- DOCTYPE: Define o tipo de documento como HTML5 -->
 <!DOCTYPE html>
+<!-- html: Elemento raiz que contém todo o conteúdo da página -->
 <html lang="pt-br">
 
+<!-- head: Contém metadados e configurações da página (não aparece no corpo da página) -->
 <head>
+  <!-- meta charset: Define a codificação de caracteres da página (UTF-8) -->
   <meta charset="UTF-8">
+  <!-- meta viewport: Configura a responsividade para dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title: Define o título que aparece na aba do navegador -->
   <title>SyntaxWear - Tênis e Sneakers Online</title>
+  <!-- meta description: Define a descrição da página para mecanismos de busca -->
   <meta name="description"
     content="Compre os melhores tênis e sneakers online na SyntaxWear. Encontre modelos exclusivos, ofertas imperdíveis e frete grátis para todo o Brasil.">
+  <!-- link: Conecta arquivos CSS externos à página HTML -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/base.css">
@@ -16,26 +24,37 @@
   <link rel="stylesheet" href="./css/components/product-category.css">
   <link rel="stylesheet" href="./css/components/product-grid.css">
   <link rel="stylesheet" href="./css/components/footer.css">
+  <!-- /head: Fim da seção de metadados -->
 </head>
 
+<!-- body: Contém todo o conteúdo visível da página -->
 <body>
 
+  <!-- header: Seção do cabeçalho da página -->
   <header class="header">
     <!-- Logo e navegacao -->
+    <!-- h1: Título principal da página (deve ter apenas um por página) -->
     <h1 class="logo">
+      <!-- a: Link/hyperlink que redireciona para uma página -->
       <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
+        <!-- img: Tag para inserir imagens na página -->
         <img src="./images/logo/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online">
       </a>
     </h1>
 
+    <!-- input type="checkbox": Campo de entrada de tipo checkbox (usado para controlar menu mobile) -->
     <input type="checkbox" class="menu-toggle" id="menu-toggle">
+    <!-- label: Rótulo associado a um elemento de formulário -->
     <label for="menu-toggle" class="menu-icon">
       <img src="./images/icons/hamburguer.svg" alt="menu mobile">
     </label>
 
+    <!-- nav: Seção de navegação principal da página -->
     <nav class="nav-container">
       <nav class="nav-center" aria-label="Categorias Principais">
+        <!-- ul: Lista desordenada (sem ordem específica) -->
         <ul>
+          <!-- li: Item de lista -->
           <li><a href="#">Masculino</a></li>
           <li><a href="#">Feminino</a></li>
           <li><a href="#">Outlet</a></li>
@@ -45,6 +64,7 @@
         <ul>
           <li><a href="#">Nossas Lojas</a></li>
           <li><a href="#">Sobre</a></li>
+          <!-- aria-label: Atributo que fornece rótulo acessível para leitores de tela -->
           <li><a href="#" aria-label="Minha conta">
               <img src="./images/icons/user.svg" alt="Minha conta">
             </a></li>
@@ -59,14 +79,20 @@
     </nav>
   </header>
 
+  <!-- main: Contém o conteúdo principal e único da página -->
   <main>
+    <!-- section: Define uma seção temática de conteúdo -->
     <section class="hero-section">
       <!-- Secao hero -->
+      <!-- div: Container genérico usado para agrupar e organizar elementos -->
       <div class="hero-overlay">
         <div class="hero-content">
+          <!-- span: Elemento inline usado para agrupar pequenos trechos de conteúdo -->
           <span class="hero-subtitle">Krypton One</span>
+          <!-- h2: Subtítulo / Heading secundário da página -->
           <h2 class="hero-title">Transforme qualquer passo em presença.</h2>
           <div class="hero-buttons">
+            <!-- Botões com links para ações -->
             <a class="btn btn-outline" href="#">Ver modelos</a>
             <a class="btn btn-filled" href="#">Comprar</a>
           </div>
@@ -76,6 +102,7 @@
 
     <section class="categories-section">
       <!-- Secao de categorias de tenis -->
+      <!-- Cada categoria é um card com imagem de fundo e link --> 
       <div class="categorias-container">
         <div class="category-card casual">
           <a href="#" class="category-link">
@@ -112,9 +139,12 @@
 
     <section class="grid-section">
       <!-- Grid com protutos em destaque -->
+      <!-- article: Elemento semântico para conteúdo independente (neste caso, produtos) -->
        <div class="card produto1">
         <div class="top1-content">
+          <!-- h3: Heading terciário para títulos menores -->
           <h3 class="card-title">Krypton One</h3>
+          <!-- p: Parágrafo de texto -->
           <p class="card-subtitle">Estilo Urbano com atitude</p>
           <div class="cta-group">
             <a href="#" class="btn btn-outline">Feminino</a>
@@ -130,14 +160,19 @@
     </section>
   </main>
 
+  <!-- footer: Rodapé da página com informações complementares -->
   <footer class="site-footer" id="footer">
-			<div class="footer-content">
-				<div class="footer-right">
-					<form class="newsletter-form">
-						<label for="newsletter-email">Inscreva-se em nosso e-mail</label>
+		<div class="footer-content">
+			<div class="footer-right">
+				<!-- form: Formulário para coletar dados do usuário -->
+				<form class="newsletter-form">
+					<!-- label: Rótulo descritivo para campo de entrada -->
+					<label for="newsletter-email">Inscreva-se em nosso e-mail</label>
+					<!-- input type="email": Campo de entrada para endereço de e-mail -->
 						<input type="email" id="newsletter-email" placeholder="email@email.com" />
 					</form>
 					<div class="footer-social">
+						<!-- Seção de redes sociais -->
 						<span>Redes sociais</span>
 						<ul>
 							<li>
@@ -158,6 +193,7 @@
 				<nav class="footer-nav" id="footer">
 					<ul>
 						<li>
+							<!-- strong: Texto com forte importância (geralmente em negrito) -->
 							<strong>Masculino</strong>
 							<ul>
 								<li><a href="#">Casual</a></li>
@@ -199,7 +235,9 @@
 					</ul>
 				</nav>
 			</div>
+			<!-- hr: Linha divisória horizontal --> 
 			<hr />
+			<!-- Seção de copyright -->
 			<div class="footer-copy">Copyright. All Rights Reserved</div>
 		</footer>
 </body>

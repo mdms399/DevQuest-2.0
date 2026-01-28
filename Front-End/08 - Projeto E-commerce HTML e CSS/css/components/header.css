@@ -1,114 +1,179 @@
-/* header.css */
+/* header.css - Estilos do cabeçalho da página */
+
+/* .header: Container principal do cabeçalho */
 .header{
+    /* position: fixed mantém o header fixo no topo da página */
     position: fixed;
+    /* top: 60px posiciona a 60px do topo */
     top: 60px;
+    /* left: 50% move para o meio horizontalmente */
     left: 50%;
+    /* transform: translate(-50%) centraliza o elemento */
     transform: translate(-50%);
+    /* width: 1260px define a largura do header */
     width: 1260px;
+    /* border-radius: 15px arredonda os cantos */
     border-radius: 15px;
+    /* z-index: 999 coloca o header acima de outros elementos */
     z-index: 999;
+    /* display: flex usa flexbox para organizar elementos filhos */
     display: flex;
+    /* justify-content: space-between distribui os elementos com espaço entre eles */
     justify-content: space-between;
+    /* align-items: center centraliza os itens verticalmente */
     align-items: center;
+    /* padding: espaço interno do header */
     padding: 0.265rem 1.25rem;
+    /* background-color: #ffffff fundo branco */
     background-color: #ffffff;
 }
 
+/* .logo img: Imagem da logo */
 .logo img {
+    /* height: 48px define a altura da logo */
     height: 48px;
 }
 
+/* .nav-center ul: Lista de navegação central */
 .nav-center ul {
+    /* display: flex organiza os itens em linha */
     display: flex;
+    /* gap: 2.5rem espaço entre os itens */
     gap: 2.5rem;
 }
 
+/* Efeito ao passar o mouse sobre links */
 .nav-center a:hover, .nav-right a:hover{
+    /* color: #7c3aed muda a cor para roxo ao passar o mouse */
     color: #7c3aed;
 }
 
+/* .nav-right ul: Lista de navegação direita */
 .nav-right ul {
+    /* display: flex organiza os itens em linha */
     display: flex;
+    /* gap: 2.5rem espaço entre os itens */
     gap: 2.5rem;
+    /* align-items: center centraliza verticalmente */
     align-items: center;
 }
 
+/* .nav-right img: Imagens dos ícones */
 .nav-right img {
+    /* height: 20px define a altura dos ícones */
     height: 20px;
 }
 
+/* Efeito ao passar o mouse sobre ícones */
 .nav-right a:hover img { 
+    /* opacity: 0.7 deixa o ícone mais transparente */
     opacity: 0.7;
 }
 
+/* .nav-container: Container da navegação */
 .nav-container {
+    /* display: flex organiza os elementos em linha */
     display: flex;
+    /* justify-content: space-between distribui os elementos */
     justify-content: space-between;
+    /* width: 100% ocupa toda a largura disponível */
     width: 100%;
+    /* align-items: center centraliza os itens */
     align-items: center;
+    /* flex: 1 faz o container crescer para ocupar o espaço disponível */
     flex: 1;
+    /* margin-left: 10rem espaço à esquerda */
     margin-left: 10rem;
 }
 
+/* .menu-toggle: Checkbox para controlar menu mobile (oculto) */
 .menu-toggle {
+    /* display: none oculta o checkbox */
     display: none;
 }
 
+/* .menu-icon: Ícone do menu hamburguer (oculto por padrão) */
 .menu-icon {
+    /* display: none oculta por padrão (visível em mobile) */
     display: none;
+    /* width: 30px e height: 30px definem as dimensões */
     width: 30px;
     height: 30px;
+    /* cursor: pointer muda o cursor ao passar o mouse */
     cursor: pointer;
+    /* z-index: 1001 coloca acima de outros elementos */
     z-index: 1001;
 }
 
-
+/* Imagem do ícone do menu */
 .menu-icon img {
+    /* width e height ocupam 100% do container */
     width: 100%;
     height: 100%;
+    /* transition: cria animação suave */
     transition: opacity 0.3s ease;
 }
 
+/* Efeito ao passar o mouse sobre o ícone do menu */
 .menu-icon:hover img {
+    /* opacity: 0.7 deixa o ícone mais transparente */
     opacity: 0.7;
 }
 
+/* @media: Estilos para dispositivos com largura máxima de 1280px (mobile) */
 @media (max-width: 1280px){
+    /* Ajusta a largura do header para telas menores */
     .header{
         width: calc(100% - 40px);
     }
 
+    /* Mostra o ícone do menu em telas menores */
     .menu-icon{
         display: block;
     }
 
+    /* Transforma o nav-container em menu lateral */
     .nav-container{
+        /* position: fixed fixa o menu na posição */
         position: fixed;
+        /* top: 0 posiciona no topo */
         top: 0;
+        /* right: -100% inicia o menu fora da tela */
         right: -100%;
+        /* width: 200px largura do menu lateral */
         width: 200px;
+        /* flex-direction: column organiza os itens em coluna */
         flex-direction: column;
+        /* padding: espaço interno do menu */
         padding: 80px 20px 20px;
+        /* background-color: #ffffff fundo branco */
         background-color: #ffffff;
+        /* gap: 2rem espaço entre os itens */
         gap: 2rem;
+        /* transition: cria animação ao abrir/fechar */
         transition: right 0.3s ease;
+        /* align-items: flex-start alinha itens à esquerda */
         align-items: flex-start;
     }
 
+    /* Remove a navegação em linha para telas pequenas */
     .nav-center, .nav-right {
         width: 100%;
         text-align: center;
     }
 
+    /* Itens da navegação ocupam toda a largura */
     .nav-center li, .nav-right li {
         width: 100%;
         text-align: center;
     }
 
+    /* Links ocupam toda a largura */
     .nav-center ul li, .nav-right ul li {
         width: 100%;
     }
 
+    /* Estilos dos links do menu */
     .nav-center a, .nav-right a {
         width: 100%;
         border-bottom: 1px solid #eeeeee;
@@ -117,6 +182,7 @@
         display: block;
     }
 
+    /* Mostra o menu quando o checkbox está marcado */
     .menu-toggle:checked ~ .nav-container {
         right: 0;
     }

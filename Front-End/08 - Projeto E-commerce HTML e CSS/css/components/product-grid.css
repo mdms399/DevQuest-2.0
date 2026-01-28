@@ -1,103 +1,154 @@
-/* product-grid.css */
+/* product-grid.css - Estilos do grid de produtos */
+
+/* .card: Classe base para cards de produto */
 .card {
+    /* background-position: center posiciona a imagem no centro */
     background-position: center;
+    /* background-size: cover faz a imagem cobrir todo o card */
     background-size: cover;
+    /* background-repeat: no-repeat evita repetição da imagem */
     background-repeat: no-repeat;
+    /* position: relative permite posicionamento absoluto de elementos filhos */
     position: relative;
+    /* border-radius: 20px arredonda os cantos */
     border-radius: 20px;
+    /* overflow: hidden garante que o conteúdo não saia do card */
     overflow: hidden;
 }
 
+/* .produto1: Card de produto 1 */
 .produto1 {
+  /* grid-area: produto1 define a área de grid para este card */
   grid-area: produto1;
+  /* background-image: define a imagem de fundo do card */
   background-image: url(../../images/products/card_imagem.jpg)
 }
 
+/* .produto2: Card de produto 2 */
 .produto2 {
   grid-area: produto2;
   background-image: url(../../images/products/roxo-verde-grid.jpg);
 }
 
+/* .produto3: Card de produto 3 */
 .produto3 {
   grid-area: produto3;
   background-image: url(../../images/products/modelo-feminino.jpg);
 }
 
+/* .produto4: Card de produto 4 */
 .produto4 {
   grid-area: produto4;
   background-image: url(../../images/products/futurista-grid.jpg);
 }
 
+/* .produto5: Card de produto 5 */
 .produto5 {
   grid-area: produto5;
   background-image: url(../../images/products/preto-branco-grid.jpg);
 }
 
+/* .produto6: Card de produto 6 */
 .produto6 {
   grid-area: produto6;
   background-image: url(../../images/products/moderno-grid.jpg);
 }
 
+/* .grid-section: Container do grid de produtos */
 .grid-section {
+    /* display: grid usa CSS Grid para layout */
     display: grid;
+    /* grid-template-columns: repeat(4, 1fr) cria 4 colunas iguais */
     grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(3, 300px) cria 3 linhas de 300px cada */
     grid-template-rows: repeat(3, 300px);
+    /* grid-template-areas: define como os produtos se distribuem na grid */
     grid-template-areas: 
     "produto1 produto1 produto2 produto2"
     "produto1 produto1 produto3 produto4"
     "produto5 produto5 produto3 produto6";
+    /* gap: 30px espaço entre os itens do grid */
     gap: 30px;
 }
 
+/* .top1-content: Container do conteúdo do primeiro card */
 .top1-content {
+    /* position: absolute posiciona em relação ao card */
     position: absolute;
+    /* left: 50% e transform: translateX(-50%) centraliza horizontalmente */
     left: 50%;
+    /* top: 50% e transform: translateY(-50%) centraliza verticalmente */
     top: 50%;
+    /* transform: combina a translação para centralizar */
     transform: translate(-50%, -50%);
+    /* text-align: center centraliza o texto */
     text-align: center;
 }
 
+/* .card-title: Título do card */
 .card-title {
+    /* color: #EDEDED cor clara do texto */
     color: #EDEDED;
+    /* font-size: 1.25rem tamanho da fonte */
     font-size: 1.25rem;
+    /* font-weight: 400 peso normal da fonte */
     font-weight: 400;
+    /* margin-bottom: 10px espaço abaixo do título */
     margin-bottom: 10px;
 }
 
+/* .card-subtitle: Subtítulo do card */
 .card-subtitle {
+    /* color: #EDEDED cor clara do texto */
     color: #EDEDED;
+    /* font-size: 1.5rem tamanho maior da fonte */
     font-size: 1.5rem;
+    /* font-weight: 400 peso normal da fonte */
     font-weight: 400;
+    /* margin-bottom: 20px espaço abaixo do subtítulo */
     margin-bottom: 20px;
 }
 
+/* .cta-group: Container de botões de ação */
 .cta-group {
+    /* display: flex organiza os botões em linha */
     display: flex;
+    /* gap: 10px espaço entre os botões */
     gap: 10px;
 }
 
+/* @media: Estilos para dispositivos com largura máxima de 768px */
 @media(max-width:768px) {
+    /* Ajusta o grid para 2 colunas em telas pequenas */
     .grid-section {
+      /* grid-template-columns: 1fr 1fr cria 2 colunas iguais */
       grid-template-columns: 1fr 1fr;
+      /* grid-template-rows: repeat(5, auto) cria 5 linhas com altura automática */
       grid-template-rows: repeat(5, auto);
+      /* grid-template-areas: redefine a distribuição dos produtos */
       grid-template-areas: 
       "produto1 produto1"
       "produto5 produto5"
       "produto3 produto4"
       "produto3 produto6"
       "produto2 produto2";
+      /* max-width: 100% ocupar toda a largura */
       max-width: 100%;
+      /* gap: reduz o espaço entre itens */
       gap: 0.625rem;
     }
 
+    /* Altura mínima do primeiro produto em mobile */
     .produto1 {
       min-height: 500px;
     }
 
+    /* Altura mínima para produtos 2 e 5 */
     .produto2, .produto5 {
       min-height: 190px;
     }
 
+    /* Altura mínima para produto 3 */
     .produto3 {
       min-height: 370px;
     }

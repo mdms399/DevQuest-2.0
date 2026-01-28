@@ -1,5 +1,8 @@
+/* @import: Importa fontes externas do Google Fonts para uso no projeto */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/* :root: Define variáveis CSS globais que podem ser usadas em todo o projeto */
 :root{
+    /* --fonte-principal: Variável que armazena a fonte 'Ubuntu' para ser reutilizada */
     --fonte-principal: 'Ubuntu' , sans-serif;
 }

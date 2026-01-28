@@ -1,45 +1,74 @@
-/* base.css */
+/* base.css - Estilos base da página */
+
+/* body: Define estilos gerais aplicados a todo corpo da página */
 body {
+    /* font-family: Define a fonte usando uma variável CSS global */
     font-family: var(--fonte-principal);
+    /* color: Define a cor padrão do texto */
     color: #333333;
 }
 
+/* main: Define estilos do conteúdo principal */
 main {
+    /* padding: Adiciona espaço interno na parte superior e inferior */
     padding: 2.5rem 0 2.5rem;
+    /* max-width: Define a largura máxima do conteúdo */
     max-width: 1360px; 
+    /* margin: Centraliza o conteúdo horizontalmente */
     margin: 0 auto;
 }
 
+/* @media: Consulta de mídia para dispositivos com largura máxima de 1280px */
 @media (max-width:1280px) {
     main {
+        /* Reduz o padding em telas menores */
         padding: 0.625rem;
     }
 }
 
+/* .btn: Classe para estilizar botões genéricos */
 .btn {
+    /* font-size: Define o tamanho da fonte do botão */
     font-size: 1.25rem;
+    /* width e height: Define as dimensões do botão */
     width: 161px;
     height: 48px;
+    /* border-radius: Arredonda os cantos do botão */
     border-radius: 25px;
+    /* color: Define a cor do texto do botão */
     color: #ffffff;
+    /* font-weight: Define a espessura da fonte */
     font-weight: 400;
+    /* padding: Espaço interno dentro do botão */
     padding: 10px 20px;
+    /* transition: Cria animações suaves ao passar o mouse */
     transition: background-color 0.3s, border 0.3s;
 }
 
+/* .btn-outline: Variação de botão com borda e fundo transparente */
 .btn-outline {
+    /* background-color: Fundo transparente */
     background-color: transparent;
+    /* border: Adiciona borda branca */
     border: 2px solid #ffffff;
+    /* line-height: Define a altura da linha de texto */
     line-height: 23px;
 }
 
+/* .btn-filled: Variação de botão com fundo preenchido */
 .btn-filled {
+    /* background-color: Fundo branco sólido */
     background-color: #ffffff;
+    /* color: Muda a cor do texto para roxo */
     color: #6329A2;
 }
 
+/* .btn:hover: Define estilos quando o mouse passa sobre o botão */
 .btn:hover {
+    /* Muda a cor de fundo para roxo ao passar o mouse */
     background-color: #6329A2;
+    /* Muda a cor do texto para branco */
     color: #ffffff;
+    /* Muda a cor da borda para roxo */
     border-color: #6329A2 ;
 }

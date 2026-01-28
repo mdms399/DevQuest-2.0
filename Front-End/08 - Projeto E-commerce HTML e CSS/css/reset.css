@@ -1,11 +1,14 @@
-/* Regras de box sizing */
+/* reset.css - Arquivo que reseta estilos padrão do navegador para padronizar */
+
+/* Regras de box sizing: Define como o tamanho dos elementos é calculado */
 *,
 *::before,
 *::after {
+  /* box-sizing: border-box faz a largura incluir padding e border */
   box-sizing: border-box;
 }
 
-/* Remove margens padrão */
+/* Remove margens padrão de elementos específicos */
 body,
 h1,
 h2,
@@ -16,69 +19,91 @@ figure,
 blockquote,
 dl,
 dd {
+  /* margin: 0 remove a margem padrão que navegadores adicionam */
   margin: 0;
 }
 
-/* Remove estilos de lista em elementos ul, ol com role='list', o que sugere que o estilo padrão será removido */
+/* Remove estilos de lista em elementos ul, ol com role='list' */
 ul[role='list'],
 ol[role='list'] {
+  /* list-style: none remove os pontos/números das listas */
   list-style: none;
 }
 
-/* Define padrões principais do root */
+/* Define comportamento de rolagem suave ao clicar em âncoras */
 html:focus-within {
+  /* scroll-behavior: smooth cria uma animação suave ao rolar */
   scroll-behavior: smooth;
 }
 
 /* Define padrões principais do body */
 body {
+  /* min-height: 100vh garante que o body tenha pelo menos a altura da tela */
   min-height: 100vh;
+  /* text-rendering: otimiza a renderização do texto */
   text-rendering: optimizeSpeed;
+  /* line-height: Define o espaçamento entre linhas de texto */
   line-height: 1.5;
 }
 
 /* Elementos A que não têm classe recebem estilos padrão */
 a:not([class]) {
+  /* text-decoration-skip-ink: auto evita que sublinhado passe por partes inferiores das letras */
   text-decoration-skip-ink: auto;
 }
 
+/* Remove sublinhado padrão dos links */
 a {
+  /* text-decoration: none remove o sublinhado */
   text-decoration: none;
 }
 
+/* Remove estilos padrão de listas */
 ul, ol {
+  /* list-style: none remove os marcadores */
   list-style: none;
+  /* padding: 0 remove o espaçamento interno */
   padding: 0;
+  /* margin: 0 remove o espaçamento externo */
   margin: 0;
 }
 
 /* Torna imagens mais fáceis de trabalhar */
 img,
 picture {
+  /* max-width: 100% garante que a imagem não ultrapasse a largura do container */
   max-width: 100%;
+  /* display: block remove o espaço em branco padrão abaixo da imagem */
   display: block;
 }
 
-/* Herda fontes para inputs e botões */
+/* Herda propriedades de fonte para inputs, buttons e textareas */
 input,
 button,
 textarea,
 select {
+  /* font: inherit faz com que esses elementos herdem a fonte da página */
   font: inherit;
 }
 
-/* Remove todas as animações, transições e rolagem suave para pessoas que preferem não vê-las */
+/* Remove animações para usuários que preferem movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
+  /* Desabilita a rolagem suave para esses usuários */
   html:focus-within {
    scroll-behavior: auto;
   }
 
+  /* Reduz animações e transições para elementos */
   *,
   *::before,
   *::after {
+    /* animation-duration: reduz duração das animações */
     animation-duration: 0.01ms !important;
+    /* animation-iteration-count: faz a animação executar apenas uma vez */
     animation-iteration-count: 1 !important;
+    /* transition-duration: reduz duração das transições */
     transition-duration: 0.01ms !important;
+    /* scroll-behavior: desabilita rolagem suave */
     scroll-behavior: auto !important;
   }
 }
