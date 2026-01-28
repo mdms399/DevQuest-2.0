@@ -81,8 +81,8 @@
     background-size: cover;
 }
 
-/* @media: Estilos para dispositivos com largura máxima de 500px */
-@media(max-width:500px) {
+/* @media: Estilos para dispositivos com largura máxima de 350px */
+@media(max-width:350px) {
     /* Em telas pequenas, o card ocupa 100% da largura */
     .category-card {
         width: 100%;
